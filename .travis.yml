@@ -12,7 +12,7 @@ before_install:
 env:
   global:
     - secure: "OoR/Dxl8eyCL5wwv4yxYLygAtCbE9lcmxd1UyMT6JEQBhzvgQrG8Akeyj8vHus9FF0MwSzYqdA9ofNDc985iLCMi6exV8PdcogDhfDSV3eHuCndoooDkW7r6s5FuQX7EYa6ZaUvaDu4WV2wdZBSLGrEpD+puOH2jWdtYhE1NBRg="
-    - MERGE_TOKEN=e7de2e3472f394690b09c98998a1804d79ed172e
+    - MERGE_TOKEN=ce47884ce06f52ed3d893cd972f40301775cf236
     - SENDGRID_USERNAME=azai91
     - secure: "dbp9zLsc/R3KV2szdeGVUlbnMlo02QeCQ3hdO8861/LENe1BO/P04WPDM0Sto5pA28SMfI9uSLyeOwyS40r6zFtV1gjgW9iXjQOlAhtmO0TZ29n1sPQdNvhJNkq2QB5ipZhhZp0PBMaKR8PZRORZGKnZRvZ2kjs77AxR5s9fuJw="
     - secure: "IefyZiRK6R6a1RuMVRj1y9APRqivqR8uZ8sbsgYfPe3R2kKqN/Riu+hMG/c4P1ZIrvpd/6EYimdwsn+E4ex6YLe+Bhx3/igw9x/WEqZ56N61zWgTt8G7B6HtVs2yfBgiyhXY9sNJwgy0xePQDfH4REfkmeVL+bslg9pNtIITqrU="

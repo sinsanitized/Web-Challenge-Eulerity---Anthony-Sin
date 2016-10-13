@@ -1,15 +1,16 @@
-const React = require('react');
+import React, { Component } from 'react';
 
 // FeedItem should consist of an image (src contained in the data from the AJAX request)
-const FeedItem = React.createClass({
+class FeedItem extends Component {
+
   render() {
     // put render logic here
     return (
       <div styles={styles.container}>
       </div>
     );
-  },
-});
+  }
+}
 
 const styles = {
   container: {

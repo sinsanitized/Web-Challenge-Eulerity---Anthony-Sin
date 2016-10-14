@@ -1,17 +1,22 @@
-const React = require('react');
-const FeedItem = require('./FeedItem');
+import React, { Component } from 'react';
+import FeedItem from './FeedItem';
 
 // Feed contains multiple FeedItems
 // Put AJAX in this Component
-const Feed = React.createClass({
-  getInitialState() {
-    return {
+class Feed extends Component {
+
+  constructor() {
+    super();
+    
+    this.state = {
       urls: [],
     };
-  },
+  }
+
   componentDidMount() {
 
-  },
+  }
+
   render() {
     // put render logic here
     return (
@@ -19,8 +24,8 @@ const Feed = React.createClass({
         <FeedItem />
       </div>
     );
-  },
-});
+  }
+}
 
 const styles = {
   container: {

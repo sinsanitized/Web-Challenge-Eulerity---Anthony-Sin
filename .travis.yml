@@ -4,7 +4,7 @@ node_js:
 notifications:
   email: false
 before_install:
-  - travis_retry nvm install 5.5.0
+  - travis_retry nvm install 6.4.0
   - if [ $TRAVIS_SECURE_ENV_VARS == "true" ]; then
       npm install request;
       npm run update-package;

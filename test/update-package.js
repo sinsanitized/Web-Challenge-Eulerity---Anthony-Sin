@@ -13,6 +13,8 @@ github.fileContents({
   path: 'package.json',
   repo: 'assessments-archive',
 }, (err, response, body) => {
+  console.log('*** err:', err, '***');
+  console.log('||| body', body, '|||');
   const buf = new Buffer(body.content, 'base64');
   const newPackage = JSON.parse(buf);
   const thisPackage = require(`${__dirname}/../package.json`);

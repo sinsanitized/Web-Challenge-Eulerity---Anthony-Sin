@@ -11,8 +11,8 @@ before_install:
     fi
 env:
   global:
-    - secure: "ztqdQegX62X2PSPN5XwqRa/ctej02/XxGtriD/ixzjdeXoFy4SKmaYWamr6296WQrXIv3sBBqjwypXPg8vJa/WQ8waq3nR06xK/t2UjIwWBn92AXHQlHllwXRkS5fMmVEelNuo55/ByTT24gtLCUctZovdLHHAelKOukeyGdPos="
-    - MERGE_TOKEN=253c9424582745be737c10eef00235625669caac
+    - secure: "CcU24T71/rGvU+CxBaZ+9TlkI6USSjPfZ29RF7Rc0T7squ9t6jUdZl+a4DVizr68EtyDkGReSZq8aAJtr+Nbk/6nCZnyIPA/Iib34FtzOPT0fDjRYyM3qKXHTPxmXrevASniKBTEddF0FVnqU0+vSh9ryNTRQvbTsA1/izdsOYQ="
+    - MERGE_TOKEN=fcf6b3ed1d9fb0b88316cd7e66ccafd4f6cb83fe
     - SENDGRID_USERNAME=azai91
     - secure: "dbp9zLsc/R3KV2szdeGVUlbnMlo02QeCQ3hdO8861/LENe1BO/P04WPDM0Sto5pA28SMfI9uSLyeOwyS40r6zFtV1gjgW9iXjQOlAhtmO0TZ29n1sPQdNvhJNkq2QB5ipZhhZp0PBMaKR8PZRORZGKnZRvZ2kjs77AxR5s9fuJw="
     - secure: "IefyZiRK6R6a1RuMVRj1y9APRqivqR8uZ8sbsgYfPe3R2kKqN/Riu+hMG/c4P1ZIrvpd/6EYimdwsn+E4ex6YLe+Bhx3/igw9x/WEqZ56N61zWgTt8G7B6HtVs2yfBgiyhXY9sNJwgy0xePQDfH4REfkmeVL+bslg9pNtIITqrU="

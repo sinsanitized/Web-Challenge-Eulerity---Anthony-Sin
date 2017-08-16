@@ -12,9 +12,6 @@ before_install:
 env:
   global:
     - secure: "diFXzAzyms6IK/FPYYw/dM6MjvgfCJdlko+k0wLcwr72dPHq4iN/c/YuhHBOxCiQCtYhPqzB5Y+Kz5uB4y8sXzI6ypYOvDxOPugQrGomp6EDJtADf9Vpj1EjlP84slKdKrePCNcttyJk+zAJolRhWIZz1SFqb1zRgbXPcKMOnGk="
-    - MERGE_TOKEN=433a471f9968638cb07bff867b72411b325eaa01
-    - SENDGRID_USERNAME=azai91
-    - secure: "dbp9zLsc/R3KV2szdeGVUlbnMlo02QeCQ3hdO8861/LENe1BO/P04WPDM0Sto5pA28SMfI9uSLyeOwyS40r6zFtV1gjgW9iXjQOlAhtmO0TZ29n1sPQdNvhJNkq2QB5ipZhhZp0PBMaKR8PZRORZGKnZRvZ2kjs77AxR5s9fuJw="
     - secure: "IefyZiRK6R6a1RuMVRj1y9APRqivqR8uZ8sbsgYfPe3R2kKqN/Riu+hMG/c4P1ZIrvpd/6EYimdwsn+E4ex6YLe+Bhx3/igw9x/WEqZ56N61zWgTt8G7B6HtVs2yfBgiyhXY9sNJwgy0xePQDfH4REfkmeVL+bslg9pNtIITqrU="
     - secure: "ERN4GUhV/WtPHOhB1HzAIw+G0xow9vAWwx8HpdD2kUjGl7QoNtVk6Duys7txq0EiBIY4vDZBfvU+yVpUyswJvEaw/5q+dZ+4Py311uebjbqHSdQNiY9hHCqJ2TGng0uVWz+2tzV5CJQ7e+jXaHwcUBv38ha74hO9y6nuh2hixeI="
 script:

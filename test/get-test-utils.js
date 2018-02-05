@@ -15,6 +15,9 @@ const repo = path.dirname(__dirname).split('/').slice(-1)[0];
 // Files to copy over from assessments-archive repo into the test/ dir locally
 const filesToCopyFromArchive = [
   `test/${repo}.js`,
+  `test/${repo}/main.js`,
+  `test/${repo}/Feed.js`,
+  `test/${repo}/FeedItem.js`,
   'test/util/report.js',
   'test/util/dynamodbDoc.js',
   'test/util/lint.js',

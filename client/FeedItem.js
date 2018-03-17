@@ -6,7 +6,7 @@ class FeedItem extends Component {
   render() {
     // put render logic here
     return (
-      <div styles={styles.container}>
+      <div style={styles.container}>
       </div>
     );
   }

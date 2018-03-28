@@ -9,7 +9,7 @@ class App extends Component {
 
   render() {
     return (
-      <div styles={styles.container}>
+      <div style={styles.container}>
         <Feed />
       </div>
     );

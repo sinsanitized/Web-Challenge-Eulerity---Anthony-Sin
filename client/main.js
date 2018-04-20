@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Feed from './Feed';
 
-const url = 'https://codesmith-precourse.firebaseio.com/instagram/-JqL35o8u6t3dTQaFXSV.json';
+const url = 'https://image-server-codesmith.firebaseapp.com/images';
 
 //App consists of one feed
 class App extends Component {

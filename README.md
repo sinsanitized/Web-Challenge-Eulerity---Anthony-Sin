@@ -35,7 +35,7 @@ npm start
 1. The image feed should be populated with data from the following endpoint. The `<App>` component in main.js should pass this url to the `Feed` component as a `prop` called `feedUrl`
   - **Important:** Make sure to name your prop `feedUrl`. Failure to name props and classes correctly for this exercise will cause tests to fail.
 ````
-https://codesmith-precourse.firebaseio.com/instagram/-JqL35o8u6t3dTQaFXSV.json
+https://image-server-codesmith.firebaseapp.com/images
 ````
 1. The `Feed` component should render a `<div>` with the ID `feed`
 1. The `Feed` component should make an AJAX request to the `feedUrl` prop provided to it.

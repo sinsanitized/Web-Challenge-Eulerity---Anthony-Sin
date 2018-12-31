@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "##Summary Week 1 assessment will be used to assess your understanding of the material provided in the past week. At the end of the period, commit your work and submit a pull request.",
   "scripts": {
-    "start": "npm run watch-js & node index.js",
+    "start": "concurrently \"npm run watch-js\" \"node index.js\"",
     "watch-js": "watchify client/main.js -o build/bundle.js -t [ babelify --presets [ react es2015 ] ] -dv",
     "build-js": "browserify client/main.js -t [ babelify --presets [ react es2015 ] ] > build/bundle.js",
     "get-test-utils": "node test/get-test-utils.js",
@@ -20,6 +20,7 @@
     "babel-register": "^6.7.2",
     "babelify": "^7.2.0",
     "browserify": "^13.0.0",
+    "concurrently": "^4.0.1",
     "eslint": "^2.4.0",
     "eslint-config-airbnb": "^6.1.0",
     "eslint-plugin-react": "^4.2.3",

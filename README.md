@@ -3,7 +3,7 @@
 ## Summary
 Week 2 assessment will be used to assess your understanding of the material provided in the past week. At the end of the period, commit your work and submit a pull request to your branch name.
 
-This code has been tested on and is intended to run on Node 5.X.
+This code has been tested on and is intended to run on Node 6.X.
 
 ## Style Guide
 We'll run your code through a linter configured with the [Airbnb style guide](https://github.com/airbnb/javascript) and provide you style feedback based on the results.

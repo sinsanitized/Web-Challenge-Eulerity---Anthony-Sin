@@ -5,30 +5,23 @@ import FeedItem from './FeedItem';
 // Put AJAX in this Component
 class Feed extends Component {
 
-  // feed component shoudld render a div with the ID feed
-
   constructor() {
     super();
-
+    
     this.state = {
       urls: [],
     };
   }
-  //feed component should make an AJA request to the feed url prop
+
   componentDidMount() {
-    fetch(this.props.feedUrl)
-      .then(response => response.json())
-      .then(response => {
-        this.setState({ urls: [...response] })
-      })
+
   }
 
   render() {
-
     // put render logic here
     return (
-      <div id='feed' style={styles.container} >
-        <FeedItem url={this.state.urls} />
+      <div style={styles.container}>
+        <FeedItem />
       </div>
     );
   }

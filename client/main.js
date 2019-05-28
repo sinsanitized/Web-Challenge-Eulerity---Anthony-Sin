@@ -7,12 +7,10 @@ const url = 'https://image-server-codesmith.firebaseapp.com/images';
 //App consists of one feed
 class App extends Component {
 
-
   render() {
     return (
       <div style={styles.container}>
-        {/* app should pass a url to the feed component as a prop, called feedurl. */}
-        <Feed feedUrl={'https://image-server-codesmith.firebaseapp.com/images'} />
+        <Feed />
       </div>
     );
   }
@@ -20,7 +18,6 @@ class App extends Component {
 
 const styles = {
   container: {
-
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'center',

@@ -1,7 +1,7 @@
 {
-  "name": "week-2-assessment",
+  "name": "frontend-assessment",
   "version": "1.0.0",
-  "description": "##Summary Week 1 assessment will be used to assess your understanding of the material provided in the past week. At the end of the period, commit your work and submit a pull request.",
+  "description": "##Summary frontend assessment will be used to assess your understanding of the material provided in the previous 3 units. At the end of the period, commit your work and submit a pull request.",
   "scripts": {
     "start": "concurrently \"npm run watch-js\" \"node index.js\"",
     "watch-js": "watchify client/main.js -o build/bundle.js -t [ babelify --presets [ react es2015 ] ] -dv",

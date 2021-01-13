@@ -6,11 +6,7 @@
     "start": "concurrently \"npm run watch-js\" \"node index.js\"",
     "watch-js": "watchify client/main.js -o build/bundle.js -t [ babelify --presets [ react es2015 ] ] -dv",
     "build-js": "browserify client/main.js -t [ babelify --presets [ react es2015 ] ] > build/bundle.js",
-    "get-test-utils": "node test/get-test-utils.js",
-    "merge": "node test/merge.js",
-    "update-package": "node test/update-package.js",
-    "lint": "node test/lint.js client/main.js client/Feed.js client/FeedItem.js",
-    "test": "npm run build-js && mocha -R mocha-email-reporter -O json=test/output.json --timeout 10000 test/week-2-assessment.js"
+    "merge": "node util/merge.js"
   },
   "author": "",
   "license": "ISC",

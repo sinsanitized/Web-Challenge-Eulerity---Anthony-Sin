@@ -3,10 +3,8 @@
 ## Summary
 The frontend assessment will be used to assess your understanding of the material provided in the previous 3 units. At the end of the period, commit your work and submit a pull request to your branch name.
 
-This code has been tested on and is intended to run on Node 6.X.
-
 ## Style Guide
-We'll run your code through a linter configured with the [Airbnb style guide](https://github.com/airbnb/javascript) and provide you style feedback based on the results.
+Moving forward the assessments will also include mandatory style guidelines enforced through eslint. If you haven't done so yet, start incorporating linting into your workflow.
 
 ## How do I get started?
 1. Run the following command to install external dependencies:

@@ -20,9 +20,9 @@
     "expect": "^1.15.2",
     "express": "^4.13.4",
     "mocha-email-reporter": "^1.0.3",
-    "react": "^0.14.7",
-    "react-addons-test-utils": "^0.14.7",
-    "react-dom": "^0.14.7",
+    "react": "^17.0.1",
+    "react-addons-test-utils": "^15.6.2",
+    "react-dom": "^17.0.1",
     "skin-deep": "^0.15.0",
     "watchify": "^3.7.0",
     "zombie": "^4.2.1"

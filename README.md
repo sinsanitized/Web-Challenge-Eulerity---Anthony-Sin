@@ -17,7 +17,7 @@ npm install
 ````
 npm start
 ````
-1. To view your app, navigate your browser to `http://localhost:3000`
+1. To view your app, navigate your browser to `http://localhost:8080`
 
 ## Specification
 1. Create a React app with the following Component hierarchy:

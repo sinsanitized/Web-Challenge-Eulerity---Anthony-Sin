@@ -43,8 +43,5 @@ module.exports = {
   devServer: {
     contentBase: path.resolve(__dirname, "dist"),
     publicPath: "/",
-    proxy: {
-      "/": "http://localhost:3000/",
-    },
   },
 }

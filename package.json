@@ -4,7 +4,8 @@
   "description": "##Summary frontend assessment will be used to assess your understanding of the material provided in the previous 3 units. At the end of the period, commit your work and submit a pull request.",
   "scripts": {
     "build": "NODE_ENV=production webpack",
-    "start": "NODE_ENV=development webpack-dev-server & NODE_ENV=development nodemon index.js"
+    "start": "NODE_ENV=development webpack-dev-server & NODE_ENV=development nodemon index.js",
+    "merge": "node util/merge.js"
   },
   "author": "",
   "license": "ISC",

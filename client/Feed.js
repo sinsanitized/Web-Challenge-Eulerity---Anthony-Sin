@@ -38,4 +38,4 @@ const styles = {
   },
 };
 
-module.exports = Feed;
+export default Feed;

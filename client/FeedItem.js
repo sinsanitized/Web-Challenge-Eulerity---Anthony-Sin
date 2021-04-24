@@ -21,4 +21,4 @@ const styles = {
   },
 };
 
-module.exports = FeedItem;
+export default FeedItem;

@@ -4,7 +4,7 @@
   "description": "##Summary frontend assessment will be used to assess your understanding of the material provided in the previous 3 units. At the end of the period, commit your work and submit a pull request.",
   "scripts": {
     "build": "NODE_ENV=production webpack",
-    "start": "NODE_ENV=development webpack-dev-server & NODE_ENV=development nodemon index.js",
+    "start": "NODE_ENV=development webpack serve & NODE_ENV=development nodemon index.js",
     "merge": "node util/merge.js"
   },
   "author": "",
@@ -34,6 +34,6 @@
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.0.0",
-    "webpack-cli": "^3.3.8"
+    "webpack-cli": "^4.7.2"
   }
 }

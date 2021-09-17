@@ -24,8 +24,8 @@ GithubApi.prototype.mergePullRequest = function(options, next) {
   if (!org) throw new Error('Need to provide org.');
   
   request.put({
-    uri: `${this.host}/repos/${org}/${options.repo}/pulls/${options.pull}/merge?access_token=${this.token}`,
-    headers: { 'user-agent': 'node.js' },
+    uri: `${this.host}/repos/${org}/${options.repo}/pulls/${options.pull}/merge`,
+    headers: { 'user-agent': 'node.js', 'Authorization': `token ${this.token}` },
     followAllRedirects: true,
     json: true,
     body: { commit_message: options.message || 'GithubApi merging pull request.', sha: options.sha }

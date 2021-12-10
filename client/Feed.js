@@ -14,21 +14,14 @@ class Feed extends Component {
   }
 
   componentDidMount() {
-    console.log("mounted")
-    fetch(this.props.feedUrl)
-    .then((res) => res.json())
-    .then((data) => this.setState({ urls: data}))
+
   }
 
   render() {
     // put render logic here
-    let allFeedItems = this.state.urls.map((item) =>{
-      return <FeedItem key={item} url={item} />
-    })
-
     return (
-      <div style={styles.container} id="feed">
-        {allFeedItems}
+      <div style={styles.container}>
+        <FeedItem />
       </div>
     );
   }

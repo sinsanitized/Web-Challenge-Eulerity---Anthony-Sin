@@ -41,7 +41,11 @@ module.exports = {
     extensions: [".js", ".jsx"],
   },
   devServer: {
-    contentBase: path.resolve(__dirname, "dist"),
-    publicPath: "/",
+    static: {
+      directory: path.resolve(__dirname, "dist"),      
+    },
+    devMiddleware: {
+      publicPath: "/",
+    }
   },
 }

@@ -6,7 +6,8 @@ class FeedItem extends Component {
   render() {
     // put render logic here
     return (
-      <div style={styles.container}>
+      <div style={styles.container} class="feedItem">
+        <img src={this.props.url} />
       </div>
     );
   }

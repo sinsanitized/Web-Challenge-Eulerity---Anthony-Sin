@@ -24,7 +24,7 @@
     "react-dom": "^17.0.1",
     "skin-deep": "^0.15.0",
     "webpack": "^5.35.0",
-    "webpack-dev-server": "^3.11.2",
+    "webpack-dev-server": "^4.6.0",
     "zombie": "^4.2.1"
   },
   "devDependencies": {

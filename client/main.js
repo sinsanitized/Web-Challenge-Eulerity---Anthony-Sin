@@ -7,10 +7,15 @@ const url =
 
 //App consists of one feed
 class App extends Component {
+
+  componentDidMount(){
+    console.log("main component mounted")
+  }
+
   render() {
     return (
       <div style={styles.container}>
-        <Feed />
+        <Feed feedUrl={url} />
       </div>
     );
   }

@@ -15,7 +15,7 @@ class FeedItem extends Component {
 const styles = {
   container: {
     border: '1px solid black',
-    height: 100,
+    height: '100%',
     width: '100%',
     flex: 1,
   },

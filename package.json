@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "##Summary frontend assessment will be used to assess your understanding of the material provided in the previous 3 units. At the end of the period, commit your work and submit a pull request.",
   "scripts": {
-    "build": "NODE_ENV=production webpack",
-    "start": "NODE_ENV=development webpack serve & NODE_ENV=development nodemon index.js",
+    "build": "cross-env NODE_ENV=production webpack",
+    "start": " concurrently  \" cross-env NODE_ENV=development nodemon index.js\" \" cross-env NODE_ENV=development webpack serve\"",
     "merge": "node util/merge.js"
   },
   "author": "",
@@ -15,6 +15,7 @@
     "@babel/preset-react": "^7.13.13",
     "babel-loader": "^8.2.2",
     "concurrently": "^4.0.1",
+    "cross-env": "^7.0.3",
     "expect": "^1.15.2",
     "express": "^4.13.4",
     "html-webpack-plugin": "^5.3.1",

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Feed from './Feed';
 
 const url =
-  'https://us-central1-codesmith-curriculum-server.cloudfunctions.net/app/images';
+  'http://image-server-prod.eba-jqccpzay.us-west-2.elasticbeanstalk.com/images';
 
 //App consists of one feed
 class App extends Component {

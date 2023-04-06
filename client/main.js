@@ -1,20 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import Feed from './Feed';
 
 const url =
   'http://image-server-prod.eba-jqccpzay.us-west-2.elasticbeanstalk.com/images';
 
-//App consists of one feed
-class App extends Component {
-  render() {
-    return (
-      <div style={styles.container}>
-        <Feed />
-      </div>
-    );
-  }
+
+// App consists of one feed
+const App = () => {
+  return (
+    <div style={styles.container}>
+      <Feed />
+    </div>
+  );
 }
+
 
 const styles = {
   container: {

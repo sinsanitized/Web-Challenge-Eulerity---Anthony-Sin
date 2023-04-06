@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import Feed from './Feed';
 
 const url =
@@ -25,4 +25,5 @@ const styles = {
 };
 
 // Render an <App> component to the #app div in the body
-ReactDOM.render(<App />, document.getElementById('app'));
+const root = createRoot(document.getElementById('app'));
+root.render(<App />);

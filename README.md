@@ -37,13 +37,14 @@ http://image-server-prod.eba-jqccpzay.us-west-2.elasticbeanstalk.com/images
 ````
 1. The `Feed` component should render a `<div>` with the ID `feed`
 1. The `Feed` component should make an AJAX request to the `feedUrl` prop provided to it.
-1. Upon completion of the AJAX request, `Feed` must use setState to add to the state a key named `urls` with its value being the array of URLs.
+1. Upon completion of the AJAX request, `Feed` must use the `updateUrls` setter function update the `urls` state variable to the returned array of URLs.
   - **Important:** Be sure to name the key `urls` for testing purposes.
 1.  `Feed` must render a `FeedItem` component for each url in the `urls` array in its state object (these `FeedItem` components should be inside the `#feed` <div>)
 1. The `Feed` component must pass each `FeedItem` its image url as a `prop` named `url`
 1. The `FeedItem` component must render an `<img>` tag, using its `url` prop for the `src` attribute on the img tag.
 1. The `<img>` tag for `FeedItem` must be inside a `<div>` with the class `feedItem`
 1. **Bonus** - A `FeedItem` should remove itself from the DOM if its `<img>` tag fails to load for any reason.
+1. **Bonus** - Make your AJAX request and corresponding `updateUrls` call from within the `useEffect` hook
 
 
 ## What do I do when I am done?

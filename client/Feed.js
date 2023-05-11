@@ -1,30 +1,18 @@
-import React, { Component } from 'react';
+import React, { useEffect, useState } from 'react';
 import FeedItem from './FeedItem';
 
 // Feed contains multiple FeedItems
 // Put AJAX in this Component
-class Feed extends Component {
+const Feed = () => {
 
-  constructor() {
-    super();
-    
-    this.state = {
-      urls: [],
-    };
-  }
+  const [urls, updateUrls] = useState([]);
 
-  componentDidMount() {
-
-  }
-
-  render() {
-    // put render logic here
-    return (
-      <div style={styles.container}>
-        <FeedItem />
-      </div>
-    );
-  }
+  // put render logic here
+  return (
+    <div style={styles.container}>
+      <FeedItem />
+    </div>
+  );
 }
 
 const styles = {

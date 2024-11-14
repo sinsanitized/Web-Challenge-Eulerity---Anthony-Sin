@@ -4,7 +4,9 @@
   "description": "##Summary frontend assessment will be used to assess your understanding of the material provided in the previous 3 units. At the end of the period, commit your work and submit a pull request.",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack",
-    "start": "cross-env NODE_ENV=development webpack serve"
+    "start": "cross-env NODE_ENV=development webpack serve",
+    "format": "prettier --write \"client/**/*.{js,jsx}\"",
+    "format:check": "prettier --check \"client/**/*.{js,jsx}\""
   },
   "author": "",
   "license": "ISC",
@@ -29,6 +31,7 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.27.1",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "prettier": "^3.3.3",
     "webpack-cli": "^4.9.1"
   }
 }

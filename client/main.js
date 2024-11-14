@@ -5,7 +5,6 @@ import Feed from './Feed';
 const url =
   'http://image-server-prod.eba-jqccpzay.us-west-2.elasticbeanstalk.com/images';
 
-
 // App consists of one feed
 const App = () => {
   return (
@@ -13,8 +12,7 @@ const App = () => {
       <Feed />
     </div>
   );
-}
-
+};
 
 const styles = {
   container: {

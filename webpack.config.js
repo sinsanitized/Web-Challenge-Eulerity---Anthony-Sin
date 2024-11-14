@@ -1,16 +1,16 @@
 const path = require('path');
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './client/main.js',
   mode: 'development',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./index.html",
+      template: './index.html',
     }),
   ],
   module: {
@@ -20,32 +20,32 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader',
         options: {
-          presets: ["@babel/preset-react", "@babel/preset-env"],
+          presets: ['@babel/preset-react', '@babel/preset-env'],
         },
       },
       {
         test: /css$/i,
-        use: ["style-loader", "css-loader"],
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.(png|jpe?g|gif)$/i,
         use: [
           {
-            loader: "file-loader",
+            loader: 'file-loader',
           },
         ],
       },
-    ]
+    ],
   },
   resolve: {
-    extensions: [".js", ".jsx"],
+    extensions: ['.js', '.jsx'],
   },
   devServer: {
     static: {
-      directory: path.resolve(__dirname, "dist"),      
+      directory: path.resolve(__dirname, 'dist'),
     },
     devMiddleware: {
-      publicPath: "/",
-    }
+      publicPath: '/',
+    },
   },
-}
+};

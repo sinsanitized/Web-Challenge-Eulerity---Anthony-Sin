@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "##Summary frontend assessment will be used to assess your understanding of the material provided in the previous 3 units. At the end of the period, commit your work and submit a pull request.",
   "scripts": {
-    "build": "cross-env NODE_ENV=production webpack",
-    "start": " concurrently  \" cross-env NODE_ENV=development nodemon index.js\" \" cross-env NODE_ENV=development webpack serve\"",
+    "start": "cross-env NODE_ENV=development webpack serve",
     "merge": "node util/merge.js"
   },
   "author": "",
@@ -20,7 +19,6 @@
     "express": "^4.13.4",
     "html-webpack-plugin": "^5.3.1",
     "mocha-email-reporter": "^1.0.3",
-    "nodemon": "^2.0.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "skin-deep": "^0.15.0",

@@ -4,7 +4,6 @@ import FeedItem from './FeedItem';
 // Feed contains multiple FeedItems
 // Put AJAX in this Component
 const Feed = () => {
-
   const [urls, updateUrls] = useState([]);
 
   // put render logic here
@@ -13,7 +12,7 @@ const Feed = () => {
       <FeedItem />
     </div>
   );
-}
+};
 
 const styles = {
   container: {

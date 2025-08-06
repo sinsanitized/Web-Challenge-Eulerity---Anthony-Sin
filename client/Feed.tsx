@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import FeedItem from './FeedItem';
+import React, { useEffect, useState } from "react";
+import FeedItem from "./FeedItem.tsx";
 
 // Feed contains multiple FeedItems
 // Put AJAX in this Component
@@ -16,12 +16,12 @@ const Feed = () => {
 
 const styles = {
   container: {
-    border: '1px black solid',
-    width: '50%',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    padding: '10px',
+    border: "1px black solid",
+    width: "50%",
+    display: "flex",
+    flexDirection: "column" as const,
+    alignItems: "center",
+    padding: "10px",
   },
 };
 

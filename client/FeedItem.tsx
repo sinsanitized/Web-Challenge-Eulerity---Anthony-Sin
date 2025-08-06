@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 // FeedItem should consist of an image (src contained in the data from the AJAX request)
 const FeedItem = () => {
@@ -8,9 +8,9 @@ const FeedItem = () => {
 
 const styles = {
   container: {
-    border: '1px solid black',
-    height: '100%',
-    width: '100%',
+    border: "1px solid black",
+    height: "100%",
+    width: "100%",
     flex: 1,
   },
 };

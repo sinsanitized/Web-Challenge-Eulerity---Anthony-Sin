@@ -3,9 +3,6 @@
 ## Summary
 The frontend assessment will be used to assess your understanding of the material provided in the previous 3 units. At the end of the period, commit your work and submit a pull request to your branch name.
 
-## Style Guide
-Moving forward the assessments will also include mandatory style guidelines enforced through eslint. If you haven't done so yet, start incorporating linting into your workflow.
-
 ## How do I get started?
 1. Run the following command to install external dependencies:
 ````
@@ -17,7 +14,7 @@ npm install
 ````
 npm start
 ````
-1. To view your app, navigate your browser to `http://localhost:8080`
+1. To view your app, navigate your browser to `http://localhost:5173`
 
 ## Specification
 1. Create a React app with the following Component hierarchy:

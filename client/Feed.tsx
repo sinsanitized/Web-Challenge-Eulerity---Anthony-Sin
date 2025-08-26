@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from "react";
 import FeedItem from "./FeedItem";
 
+// interface feedUrl
 interface FeedProps {
   feedUrl: string;
 }
 
 // Feed contains multiple FeedItems
 // Put AJAX in this Component
+// set state for Urls
 const Feed = ({ feedUrl }) => {
   const [urls, setUrls] = useState([]);
 
   // put render logic here
-
+  // async fetch try catch
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -25,7 +27,8 @@ const Feed = ({ feedUrl }) => {
     fetchData();
   }, [feedUrl]);
 
-
+  // return the div feed
+  // map to populate and render
   return (
     <div id="feed" style={styles.container}>
       {urls.map((url, index) => (

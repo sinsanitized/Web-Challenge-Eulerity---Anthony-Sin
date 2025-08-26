@@ -2,6 +2,7 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import Feed from "./Feed";
 
+//feed Url
 const feedUrl =
   "http://image-server-prod.eba-jqccpzay.us-west-2.elasticbeanstalk.com/images";
 
@@ -9,7 +10,7 @@ const feedUrl =
 const App = () => {
   return (
     <div style={styles.container}>
-      <Feed feedUrl={feedUrl}/>
+      <Feed feedUrl={feedUrl}/> 
     </div>
   );
 };
@@ -23,6 +24,7 @@ const styles = {
 };
 
 // Render an <App> component to the #app div in the body
+// if container is truthy render
 const container = document.getElementById("app");
 if (container) {
   createRoot(container).render(<App />);

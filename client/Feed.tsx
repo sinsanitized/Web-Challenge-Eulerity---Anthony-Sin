@@ -1,15 +1,36 @@
 import React, { useEffect, useState } from "react";
-import FeedItem from "./FeedItem.tsx";
+import FeedItem from "./FeedItem";
+
+interface FeedProps {
+  feedUrl: string;
+}
 
 // Feed contains multiple FeedItems
 // Put AJAX in this Component
-const Feed = () => {
-  const [urls, updateUrls] = useState([]);
+const Feed = ({ feedUrl }) => {
+  const [urls, setUrls] = useState([]);
 
   // put render logic here
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(feedUrl);
+        const data = await response.json();
+        setUrls(data);; // must use key `urls`
+      } catch (error) {
+        console.error("Oops fetch error:", error);
+      }
+    };
+    fetchData();
+  }, [feedUrl]);
+
+
   return (
-    <div style={styles.container}>
-      <FeedItem />
+    <div id="feed" style={styles.container}>
+      {urls.map((url, index) => (
+        <FeedItem key={index} url={url} />
+      ))}
     </div>
   );
 };

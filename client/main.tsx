@@ -1,15 +1,15 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import Feed from "./Feed.tsx";
+import Feed from "./Feed";
 
-const url =
+const feedUrl =
   "http://image-server-prod.eba-jqccpzay.us-west-2.elasticbeanstalk.com/images";
 
 // App consists of one feed
 const App = () => {
   return (
     <div style={styles.container}>
-      <Feed />
+      <Feed feedUrl={feedUrl}/>
     </div>
   );
 };
@@ -17,11 +17,13 @@ const App = () => {
 const styles = {
   container: {
     display: "flex",
-    flexDirection: "row" as const,
+    flexDirection: "row",
     justifyContent: "center",
   },
 };
 
 // Render an <App> component to the #app div in the body
-const root = createRoot(document.getElementById("app")!);
-root.render(<App />);
+const container = document.getElementById("app");
+if (container) {
+  createRoot(container).render(<App />);
+}

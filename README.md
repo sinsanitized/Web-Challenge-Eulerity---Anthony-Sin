@@ -1,49 +1,65 @@
-# Frontend-Assessment
+# Pet Selector
 
-## Summary
-The frontend assessment will be used to assess your understanding of the material provided in the previous 3 units. At the end of the period, commit your work and submit a pull request to your branch name.
+React + TypeScript take-home app for browsing, selecting, sorting, and downloading pet images from `GET /pets`.
 
-## How do I get started?
-1. Run the following command to install external dependencies:
-````
+## Run
+
+```bash
 npm install
-````
-1. Complete the React App located in the `client/` directory according to the specifications below.
-  - Follow the specifications closely and be sure to name classes correctly.
-1. To start your app, run
-````
 npm start
-````
-1. To view your app, navigate your browser to `http://localhost:5173`
-
-## Specification
-1. Create a React app with the following Component hierarchy:
 ```
-                  Feed
-                    |
-                    V
-                  FeedItem
+
+The app tries `"/pets"` first and falls back to the hosted Eulerity endpoint if the local route is unavailable.
+
+If you want Vite to proxy `/pets` to the hosted API during development, set:
+
+```bash
+VITE_API_PROXY_TARGET=https://eulerity-hackathon.appspot.com npm start
 ```
-**Here is a sample of how the components should be nested.**
-![](https://www.dropbox.com/s/lf38iqjec2nfjcs/instagram-feed_shrink.png?dl=1)
 
-1. The image feed should be populated with data from the following endpoint. The `<App>` component in main.js should pass this url to the `Feed` component as a `prop` called `feedUrl`
-  - **Important:** Make sure to name your prop `feedUrl`. Failure to name props and classes correctly for this exercise will cause tests to fail.
-````
-http://image-server-prod.eba-jqccpzay.us-west-2.elasticbeanstalk.com/images
-````
-1. The `Feed` component should render a `<div>` with the ID `feed`
-1. The `Feed` component should make an AJAX request to the `feedUrl` prop provided to it.
-1. Upon completion of the AJAX request, `Feed` must use the `updateUrls` setter function update the `urls` state variable to the returned array of URLs.
-  - **Important:** Be sure to name the key `urls` for testing purposes.
-1.  `Feed` must render a `FeedItem` component for each url in the `urls` array in its state object (these `FeedItem` components should be inside the `#feed` <div>)
-1. The `Feed` component must pass each `FeedItem` its image url as a `prop` named `url`
-1. The `FeedItem` component must render an `<img>` tag, using its `url` prop for the `src` attribute on the img tag.
-1. The `<img>` tag for `FeedItem` must be inside a `<div>` with the class `feedItem`
-1. **Bonus** - A `FeedItem` should remove itself from the DOM if its `<img>` tag fails to load for any reason.
-1. **Bonus** - Make your AJAX request and corresponding `updateUrls` call from within the `useEffect` hook
+## Features
 
+- Responsive gallery layout: 1 column on mobile, 2 on tablet, 4 on desktop
+- Search across title and description
+- Sort by name A-Z, name Z-A, newest first, and oldest first
+- Client-side pagination
+- Persistent selection across routes
+- Select all filtered results, clear selection, and download selected images
+- Estimated total file size for the current selection
+- Dynamic detail route at `/pets/:id`
+- About page and not-found route
+- Explicit loading, error, empty, and no-results states
+- Styled with `styled-components`
 
-## What do I do when I am done?
-1. When completed - commit and push your changes to your github
-1. Submit a pull request to your branch on the CodesmithLLC organization's repo
+## Data Handling
+
+- The API records are normalized into a stable internal `Pet` shape.
+- Deterministic IDs are generated because the API does not provide unique identifiers.
+- Created dates are parsed into timestamps so date sorting is reliable.
+- External image URLs are normalized so the gallery and downloads use the same source URL.
+- File size estimation uses `HEAD` requests and falls back cleanly when metadata is unavailable.
+
+## Architecture
+
+- `PetsProvider` owns fetch, normalization, and server-state loading concerns.
+- `SelectionProvider` owns selected pet IDs so selection persists across route changes.
+- `GalleryPage` owns local search, sort, and pagination state.
+- Filtered, sorted, and paginated results are derived from the fetched data rather than stored separately.
+
+## Project Structure
+
+- `src/context/PetsContext.tsx` - fetches and normalizes `/pets`
+- `src/context/SelectionContext.tsx` - global selection state
+- `src/pages/GalleryPage.tsx` - gallery view, search, sort, and pagination
+- `src/pages/PetDetailPage.tsx` - detail route for `/pets/:id`
+- `src/pages/AboutPage.tsx` - project overview page
+- `src/utils/normalizePets.ts` - data normalization and ID generation
+- `src/utils/sortPets.ts` - sort helpers
+- `src/utils/estimateFileSize.ts` - best-effort file size estimation
+- `src/utils/downloadPets.ts` - selected image download flow
+
+## Notes
+
+- Selection persists when navigating from the gallery to a detail view and back.
+- The app treats image size estimates as best-effort metadata, not guaranteed values.
+- Download failures are reported partially when remote hosts block requests or return errors.
